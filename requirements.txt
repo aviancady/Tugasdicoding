@@ -25,13 +25,7 @@ pyarrow==17.0.0
 pydeck==0.9.1
 Pygments==2.18.0
 python-dateutil==2.9.0.post0
-python-json-logger==2.0.7
 pytz==2024.2
-pywinpty==2.0.13
-PyYAML==6.0.1
-pyzmq==26.0.3
-qtconsole==5.5.2
-QtPy==2.4.1
 referencing==0.35.1
 requests==2.32.3
 rich==13.9.1
