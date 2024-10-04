@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 # Set style for plots
 sns.set_style("whitegrid")
@@ -10,7 +11,9 @@ sns.set_style("whitegrid")
 # Load the data
 @st.cache_data
 def load_data():
-    all_data = pd.read_csv('all_data.csv')
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(current_dir, 'all_data.csv')
+    all_data = pd.read_csv(file_path)
     all_data['order_purchase_timestamp'] = pd.to_datetime(all_data['order_purchase_timestamp'])
     all_data['order_delivered_customer_date'] = pd.to_datetime(all_data['order_delivered_customer_date'])
     return all_data
